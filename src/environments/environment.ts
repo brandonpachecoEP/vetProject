@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  API_OWNERS: 'http://localhost:3000/api/owners',
-  API_PETS: 'http://localhost:3000/api/pets',
+  API_OWNERS: 'https://arcane-sierra-33006.herokuapp.com/api/owners',
+  API_PETS: 'https://arcane-sierra-33006.herokuapp.com//api/pets',
 };
 
 /*
