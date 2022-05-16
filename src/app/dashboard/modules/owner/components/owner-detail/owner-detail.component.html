@@ -1,0 +1,125 @@
+<div>
+  <div class="row center-xs">
+    <div class="col-xs-12">
+      <div class="box">
+        <mat-card>
+          <mat-card-title>
+            <div class="row center-xs">
+              <div class="col-xs-6">
+                <div class="box">
+                  <h2>Detalle del dueño {{owner.owner.name}}</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row end-xs">
+              <div class="col-xs-6">
+                <div class="box">
+                  <button mat-mini-fab color="primary" class="closeButton" (click)="closeModal()">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </mat-card-title>
+            <mat-card-content>
+              <div class="row col-xs-12 div-container">
+                <div class="col-xs-6">
+                  <strong>Nombre:</strong>
+                </div>
+                <div class="col-xs-6">
+                  {{owner.owner.name}}
+                </div>
+              </div>
+              <div class="row col-xs-12 div-container">
+                <div class="col-xs-6">
+                  <strong>Apellido:</strong>
+                </div>
+                <div class="col-xs-6">
+                  {{owner.owner.lastName}}
+                </div>
+              </div>
+              <div class="row col-xs-12 div-container">
+                <div class="col-xs-6">
+                  <strong>Correo:</strong>
+                </div>
+                <div class="col-xs-6">
+                  {{owner.owner.email}}
+                </div>
+              </div>
+              <div class="row col-xs-12 div-container">
+                <div class="col-xs-6">
+                  <strong>Teléfono:</strong>
+                </div>
+                <div class="col-xs-6">
+                  {{owner.owner.phone}}
+                </div>
+              </div>
+              <div class="row col-xs-12 div-container">
+                <div class="col-xs-6">
+                  <strong>Dirección:</strong>
+                </div>
+                <div class="col-xs-6">
+                  {{owner.owner.direction}}
+                </div>
+              </div>
+              <mat-accordion>
+
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Mascotas asignadas
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div *ngFor="let pet of owner.pets" class="row col-xs-12 div-container">
+                    <mat-expansion-panel class="col-xs-12">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          {{pet.name}}
+                        </mat-panel-title>
+                        <mat-panel-description>
+                          {{pet.breed}}
+                        </mat-panel-description>
+                      </mat-expansion-panel-header>
+                      <div class="row col-xs-12 div-container2">
+                        <div>
+                          <strong>Nombre:</strong>
+                        </div>
+                        <div class="col-xs-2">
+                          {{pet.name}}
+                        </div>
+                      </div>
+                      <div class="row col-xs-12 div-container2">
+                        <div>
+                          <strong>Edad:</strong>
+                        </div>
+                        <div class="col-xs-2">
+                          {{pet.age}}
+                        </div>
+                      </div>
+                      <div class="row col-xs-12 div-container2">
+                        <div>
+                          <strong>Raza:</strong>
+                        </div>
+                        <div class="col-xs-2">
+                          {{pet.breed}}
+                        </div>
+                      </div>
+                      <div class="row col-xs-12 div-container2">
+                        <div>
+                          <strong>Peso:</strong>
+                        </div>
+                        <div class="col-xs-2">
+                          {{pet.weight}}
+                        </div>
+                      </div>
+                    </mat-expansion-panel>
+                  </div>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+

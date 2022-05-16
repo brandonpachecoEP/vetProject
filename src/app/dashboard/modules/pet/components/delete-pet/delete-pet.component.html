@@ -1,0 +1,20 @@
+<div class="div-container">
+  <div class="row center-xs">
+    <div class="col-xs-12">
+      <div class="box">
+        <h1>¡Seguro que deseas eliminar la mascota <strong>{{data.name}}?</strong></h1>
+      </div>
+      <div class="row center-xs">
+
+        <div class="col-xs-2">
+          <button mat-raised-button color="accent" (click)="deleteOwner()">Eliminar</button>
+        </div>
+        <div class="col-xs-2">
+          <button mat-raised-button color="warn" (click)="cancel()">Cancelar</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

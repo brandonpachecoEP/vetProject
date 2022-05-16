@@ -1,0 +1,20 @@
+<div class="div-container">
+  <div class="row center-xs">
+    <div class="col-xs-12">
+      <div class="box">
+        <h1>¡Seguro que deseas eliminar el dueño cuyo correo asociado es <strong>{{data.email}}?</strong></h1>
+      </div>
+      <div class="row center-xs">
+
+            <div class="col-xs-2">
+              <button mat-raised-button color="accent" (click)="deleteOwner()">Eliminar</button>
+            </div>
+            <div class="col-xs-2">
+              <button mat-raised-button color="warn" (click)="cancel()">Cancelar</button>
+            </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

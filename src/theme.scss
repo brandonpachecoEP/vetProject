@@ -1,0 +1,60 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+
+$primary-palette: (
+  100: #2aa2db,
+  500: #2495cd,
+  700: #1d82ba,
+  // ... continues to 900
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    // ... continues to 900
+  )
+);
+
+$accent-palette: (
+  100: #15ff19,
+  500: #2ecb22,
+  700: #00a603,
+  // ... continues to 900
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    // ... continues to 900
+  )
+);
+
+$warn-palette: (
+  700: #D1001C,
+  100: #F01E28,
+  500: #DE0A23,
+  // ... continues to 900
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    // ... continues to 900
+  )
+);
+
+$my-primary: mat.define-palette($primary-palette);
+$my-accent: mat.define-palette($accent-palette);
+$my-warn: mat.define-palette($warn-palette);
+
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+    warn: $my-warn,
+  )
+));
+
+@include mat.all-component-themes($my-theme);
+

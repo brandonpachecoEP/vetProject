@@ -1,0 +1,72 @@
+<div>
+  <div class="row center-xs">
+    <div class="col-xs-12">
+      <div class="box">
+        <mat-card>
+          <mat-card-title>
+            <div class="row center-xs">
+              <div class="col-xs-6">
+                <div class="box">
+                  <h2>Detalle de la mascota {{pet.name}}</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row end-xs">
+              <div class="col-xs-6">
+                <div class="box">
+                  <button mat-mini-fab color="primary" class="closeButton" (click)="closeModal()">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </mat-card-title>
+          <mat-card-content>
+            <div class="row col-xs-12 div-container">
+              <div class="col-xs-6">
+                <strong>Nombre:</strong>
+              </div>
+              <div class="col-xs-6">
+                {{pet.name}}
+              </div>
+            </div>
+            <div class="row col-xs-12 div-container">
+              <div class="col-xs-6">
+                <strong>Edad:</strong>
+              </div>
+              <div class="col-xs-6">
+                {{pet.age}}
+              </div>
+            </div>
+            <div class="row col-xs-12 div-container">
+              <div class="col-xs-6">
+                <strong>Raza:</strong>
+              </div>
+              <div class="col-xs-6">
+                {{pet.breed}}
+              </div>
+            </div>
+            <div class="row col-xs-12 div-container">
+              <div class="col-xs-6">
+                <strong>Peso:</strong>
+              </div>
+              <div class="col-xs-6">
+                {{pet.weight}}
+              </div>
+            </div>
+            <div class="row col-xs-12 div-container">
+              <div class="col-xs-6">
+                <strong>Dueño:</strong>
+              </div>
+              <div class="col-xs-6">
+                {{pet.ownerId}}
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+

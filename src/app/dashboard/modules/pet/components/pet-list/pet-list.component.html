@@ -1,0 +1,84 @@
+<div>
+  <div class="col-xs-12">
+    <div class="row start-xs">
+      <div class="col-xs-6">
+        <div class="box">
+          <h1>Lista de mascotas</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row end-xs">
+      <div class="col-xs-6">
+        <div class="box middle-xs">
+          <button mat-raised-button color="primary" class="create-owner-button" routerLink="create">
+            Crear mascota
+            <mat-icon class="owner-icon">person</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons>
+    </mat-paginator>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+      <!-- Position Column -->
+      <ng-container matColumnDef="no">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element; let i = index"> {{ i + 1 }} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef> Edad </th>
+        <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="breed">
+        <th mat-header-cell *matHeaderCellDef> Raza </th>
+        <td mat-cell *matCellDef="let element"> {{element.breed}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef> Peso </th>
+        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ownerId">
+        <th mat-header-cell *matHeaderCellDef> Dueño </th>
+        <td mat-cell *matCellDef="let element"> {{element.ownerId.name}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button color="primary" [matMenuTriggerFor]="actions">
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+          <mat-menu #actions>
+            <div class="action-menu">
+              <button mat-button (click)="openDetailModal(element.id)">Ver detalle</button>
+              <button mat-button routerLink='edit/{{element.id}}'>Editar</button>
+              <button mat-button (click)="openDialog(element.id, element.name)">Eliminar</button>
+            </div>
+          </mat-menu>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+</div>
+
