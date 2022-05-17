@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   API_OWNERS: 'https://arcane-sierra-33006.herokuapp.com/api/owners',
   API_PETS: 'https://arcane-sierra-33006.herokuapp.com/api/pets',
-};
+}
 
 /*
  * For easier debugging in development mode, you can import the following file
